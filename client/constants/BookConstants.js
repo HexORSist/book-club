@@ -1,4 +1,4 @@
-var BASE_URL='thebookclub.herokuapp.com/'
+var BASE_URL='/'
 
 export default {
   BASE_URL: BASE_URL,
