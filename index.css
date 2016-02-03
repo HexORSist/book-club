@@ -1,0 +1,39 @@
+@import 'bootstrap';
+
+hr {
+	height: 2px;
+	color: gray;
+	background-color: gray;
+}
+
+.book{
+    position: relative;
+    display: inline-block;
+}
+
+.bookoption{
+	border-radius: 5px;
+	background: LightBlue;
+	width: 30px;
+	left: 4px;
+	top: 4px;
+	text-align: center;
+	border: solid black;
+	position: absolute;
+}
+
+.tradebookoption{
+	border-radius: 5px;
+	background: LightBlue;
+	width: 30px;
+	left: 4px;
+	bottom: 4px;
+	text-align: center;
+	border: solid black;
+	position: absolute;
+}
+
+.bookoption:hover, .tradebookoption:hover {
+	color: gray;
+	cursor:pointer;
+}

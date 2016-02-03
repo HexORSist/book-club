@@ -1,0 +1,72 @@
+{
+  "name": "react-flux-book-club",
+  "version": "0.0.1",
+  "description": "A book trading app with simple authentication",
+  "main": "index.js",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/HexORSist/book-club.git"
+  },
+  "authors": [
+    "Chad Schmidt <cschmidtok@gmail.com>"
+  ],
+  "browserify": {
+    "transform": [
+      "babelify"
+    ]
+  },
+  "scripts": {
+    "start": "npm run build && serve .",
+    "build": "npm run build-js && npm run build-css",
+    "watch": "npm run watch-js & npm run watch-css",
+    "test": "npm run lint -s && npm run build",
+    "build-css": "rework-npm index.css | cleancss -o build/build.css",
+    "build-js": "browserify --extension=.jsx --extension=.js client/app.jsx | uglifyjs > build/build.js",
+    "watch-js": "watchify --extension=.jsx --extension=.js client/app.jsx -o build/build.js --debug --verbose",
+    "watch-css": "nodemon -e css --ignore build/build.css --exec 'rework-npm index.css -o build/build.css'",
+    "lint-eslint": "eslint .",
+    "lint-jscs": "jscs .",
+    "lint": "npm run lint-eslint && npm run lint-jscs"
+  },
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/HexORSist/book-club.git"
+  },
+  "homepage": "https://github.com/HexORSist/book-club.git",
+  "dependencies": {
+    "body-parser": "^1.6.5",
+    "bootstrap": "^3.3.0",
+    "compression": "^1.0.11",
+    "cors": "^2.4.1",
+    "dotenv": "^0.4.0",
+    "errorhandler": "^1.1.1",
+    "express": "^4.8.5",
+    "express-jwt": "^0.3.1",
+    "flux": "^2.0.1",
+    "googleapis": "^2.1.7",
+    "jsonwebtoken": "^5.0.1",
+    "jwt-decode": "^1.1.0",
+    "lodash": "^2.4.1",
+    "mongoose": "^4.3.4",
+    "morgan": "^1.2.3",
+    "react": "^0.13",
+    "react-mixin": "^1.1.0",
+    "react-router": "^0.13.2",
+    "reqwest": "^1.1.5",
+    "when": "^3.7.2"
+  },
+  "devDependencies": {
+    "babelify": "^6.1.0",
+    "browser-sync": "^2.1.6",
+    "browserify": "^8.0.3",
+    "clean-css": "^3.1.9",
+    "eslint": "^0.14.1",
+    "nodemon": "^1.5.0",
+    "rework": "^1.0.1",
+    "rework-npm": "^1.0.0",
+    "rework-npm-cli": "^0.1.1",
+    "serve": "^1.4.0",
+    "uglify-js": "^2.4.15",
+    "watchify": "^2.1.1"
+  }
+}
