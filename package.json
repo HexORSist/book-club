@@ -15,6 +15,9 @@
       "babelify"
     ]
   },
+    "engines": {
+    "node": "4.2.4"
+  },
   "scripts": {
     "start": "node server.js",
     "postinstall": "npm run build-js && npm run build-css",
