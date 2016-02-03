@@ -16,8 +16,8 @@
     ]
   },
   "scripts": {
-    "start": "npm run build && serve .",
-    "build": "npm run build-js && npm run build-css",
+    "start": "node server.js",
+    "postinstall": "npm run build-js && npm run build-css",
     "watch": "npm run watch-js & npm run watch-css",
     "test": "npm run lint -s && npm run build",
     "build-css": "rework-npm index.css | cleancss -o build/build.css",
