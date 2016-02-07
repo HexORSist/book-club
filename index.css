@@ -1,4 +1,28 @@
 @import 'bootstrap';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.4.0/css/font-awesome.min.css';
+@import 'https://cdnjs.cloudflare.com/ajax/libs/bootstrap-social/4.9.1/bootstrap-social.min.css';
+
+/* Sticky footer styles
+-------------------------------------------------- */
+html {
+  position: relative;
+  min-height: 100%;
+}
+body {
+  /* Margin bottom by footer height */
+  margin-bottom: 60px;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0;
+  left: 8%;
+  right: 8%;
+  padding-left: 15px;
+  padding: 15px;
+  min-height: 50px;
+  background-color: LightGray;
+}
 
 hr {
 	height: 2px;
